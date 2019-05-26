@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let people of peoples; let i = index">
-      <td scope="row"><input type="checkbox" ng-disabled="{{people.checked}}"  [(ngModel)]="people.selected" id="people{{i}}" /></td>
+      <td scope="row"><input type="checkbox"  [(ngModel)]="people.selected" id="people{{i}}" [disabled]="people.checked"/></td>
       <td>{{people.first}}</td>
       <td>{{people.last}}</td>
       <td>{{people.handle}}</td>
