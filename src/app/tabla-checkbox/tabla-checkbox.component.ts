@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbModalRef  } from '@ng-bootstrap/ng-bootstrap';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabla-checkbox',
@@ -38,7 +40,7 @@ export class TablaCheckboxComponent implements OnInit {
   person: any = {
     'checked': false
   };
-  constructor(private serviceModal: NgbModal) { }
+  constructor(private serviceModal: NgbModal, private router: Router) { }
 
   ngOnInit() {
   }
@@ -56,6 +58,8 @@ export class TablaCheckboxComponent implements OnInit {
   windowNoSelectedProfessionals(value: boolean, modal) {
     if (!value) {
       this.modal = this.serviceModal.open(modal);
+    }else{
+      this.router.navigate(['table']);
     }
   }
 

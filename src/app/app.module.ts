@@ -4,19 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TablaCheckboxComponent } from './tabla-checkbox/tabla-checkbox.component';
-import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TablaCheckboxComponent
+    TablaCheckboxComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgbModalModule
+    NgbModalModule,
+    NgbTooltipModule
     ],
   providers: [],
   bootstrap: [AppComponent]
